@@ -1,0 +1,33 @@
+--AWS-----
+User Nadia:
+pwd: Canada@0919
+AWS ACess key : AKIA3FK3KY62XGEB2XTU
+secret: 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
+
+install CLI by run this CMD: copy paste all 3 lines at 1 time
+
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+path of aws: chadirahme/.aws
+using vi credentials: to exit from file without saving: ESc : q! or :wq! to write and quit
+
+
+Testing a Spring Batch Job
+https://www.baeldung.com/spring-batch-testing-job
+
+
+
+https://www.toptal.com/java/java-continuous-integration-setup-tutorial
+
+test upload file:
+curl -F file=@"help.txt" http://localhost:8080/api/storage/upload
+
+
+git init
+git add .
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/chadirahme/storagewebservice.git
+git push -u origin master
