@@ -22,6 +22,12 @@ public class StorageController {
     @Autowired
     private StorageService storageService;
 
+    @RequestMapping(value = "/health", method = RequestMethod.GET)
+    public String health()  {
+       return "Service running..";
+    }
+
+
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
     public void uploadFile(@RequestParam(value = "file", required = true) MultipartFile file) throws IOException {

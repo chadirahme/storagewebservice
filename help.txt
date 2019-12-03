@@ -27,7 +27,7 @@ curl -F file=@"help.txt" http://localhost:8080/api/storage/upload
 
 git init
 git add .
-git add README.md
+#git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/chadirahme/storagewebservice.git
 git push -u origin master
