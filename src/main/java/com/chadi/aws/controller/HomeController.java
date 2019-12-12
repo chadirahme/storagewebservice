@@ -1,11 +1,15 @@
 package com.chadi.aws.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
+
+    @Value("${aws.accesKeyId}")
+    private String awsAccessKeyId;
 
     @GetMapping({"/", "hello"})
     public String helloWorld() {
@@ -14,6 +18,6 @@ public class HomeController {
 
     @GetMapping("test")
     public String test() {
-        return "test";
+        return "test " +awsAccessKeyId;
     }
 }
