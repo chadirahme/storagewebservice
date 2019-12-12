@@ -18,6 +18,7 @@ public class HomeController {
 
     @GetMapping("test")
     public String test() {
-        return "test " +awsAccessKeyId;
+      String test= System.getenv("aws.accesKeyId");
+        return "test " +awsAccessKeyId + " online " + test;
     }
 }
